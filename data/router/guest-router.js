@@ -11,7 +11,7 @@ guestRouter.get("/", (req, res) => {
     .catch(err => {
       res
         .status(500)
-        .json({ error: "The projects information could not be retrieved." });
+        .json({ error: "The guest information could not be retrieved." });
     });
 });
 
@@ -27,12 +27,12 @@ guestRouter.post("/", (req, res) => {
       })
       .catch(err => {
         res.status(400).json({
-          errorMessage: "Please provide name and description for the project."
+          errorMessage: "Please provide name and description for the guest."
         });
       });
   } else {
     res.status(500).json({
-      error: "There was an error while saving the project to the database"
+      error: "There was an error while saving the guest to the database"
     });
   }
 });
